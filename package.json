@@ -1,0 +1,25 @@
+{
+  "name": "surrealdb-js",
+  "version": "1.0.0",
+  "description": "A lightweight and efficient JavaScript client for interacting with SurrealDB databases. Supports both v1.x and v2.x+",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "surrealdb",
+    "javascript",
+    "database",
+    "client",
+    "surrealQL",
+    "multi-model",
+    "query",
+    "authentication"
+  ],
+  "author": "BrahimEmo",
+  "engines": {
+		"node": ">=18.0.0"
+	},
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}
