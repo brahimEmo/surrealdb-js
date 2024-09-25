@@ -98,4 +98,3 @@ Specify the SurrealDB version using the `version` option in the constructor (`1.
 ## License
 
 MIT
-```
