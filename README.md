@@ -81,7 +81,7 @@ db.authenticate({
 });
 ```
 
-To invalidate the current authentication token, use:
+To invalidate the current authentication, use:
 
 ```typescript
 db.invalidate();
@@ -99,5 +99,3 @@ Specify the SurrealDB version using the `version` option in the constructor (`1.
 
 MIT
 ```
-
-Remember to replace placeholder values like URLs, usernames, passwords, and database names with your actual credentials.  This README provides a basic overview; you might want to add more detailed examples and explanations depending on the complexity of your package.
