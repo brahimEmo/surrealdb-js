@@ -1,5 +1,5 @@
 ```markdown
-# surrealdb-js
+# @brahimemo/surrealdb-js
 
 A lightweight and efficient JavaScript client for interacting with SurrealDB databases.  Supports both v1.x and v2.x+.
 

@@ -1,9 +1,9 @@
 {
   "name": "@brahimemo/surrealdb-js",
-  "version": "1.0.2",
-  "type": "module",
+  "version": "1.1.0",
   "description": "A lightweight and efficient JavaScript client for interacting with SurrealDB databases. Supports both v1.x and v2.x+",
-  "main": "index.js",
+  "main": "lib/db/index.cjs",
+  "module": "lib/db/index.mjs",
   "types": "index.d.ts",
   "keywords": [
     "surrealdb",
