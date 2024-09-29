@@ -6,7 +6,7 @@ A lightweight and efficient JavaScript client for interacting with SurrealDB dat
 ## Installation
 
 ```bash
-npm install surrealdb-js
+npm i @brahimemo/surrealdb-js
 ```
 
 ## Usage
@@ -21,15 +21,15 @@ First, initialize the `SurrealDB` class with your database configuration:
 import SurrealDB from 'surrealdb-js';
 
 const db = new SurrealDB({
-  url: 'http://localhost:8000', // Or your SurrealDB URL
+  url: 'http://localhost:8000', // Your SurrealDB URL
   version: '>= 2.x', // Specify the SurrealDB version (1.x <= or >= 2.x)
-  namespace: 'mynamespace', // Your namespace
-  database: 'mydb', // Your database
+  namespace: '<your namespace>',
+  database: '<your database>',
   auth: { // Authentication details (optional)
     method: 'Root',
     vars: {
-      username: 'yourusername',
-      password: 'yourpassword'
+      username: '<your username>',
+      password: '<your password>'
     }
   }
 });
@@ -37,7 +37,7 @@ const db = new SurrealDB({
 
 Supported authentication methods:
 
-* **`Root`**:  Requires `username` and `password`.  Optionally includes `namespace` and `database`.
+* **`Root`**:  Requires `username` and `password`.  Optionally includes `namespace` and `database` (For `Namespace` Or `Database` User).
 * **`Token`**: Requires a `token`.
 * **`Scope`**: Requires a `scope` and `vars` (key-value pairs).
 * **`Anonymous`**: Auth === undefined.
@@ -47,7 +47,11 @@ Supported authentication methods:
 Use the `query` method to execute SQL queries:
 
 ```typescript
-const [data, error] = await db.query<any[]>(`SELECT * FROM users`);
+type User = {
+  id: string;
+  name: string;
+}
+const [data, error] = await db.query<User[]>(`SELECT * FROM users`);
 
 // Handle the result (see below)
 if (error === nil && data[0].status === "OK") {
@@ -57,7 +61,11 @@ if (error === nil && data[0].status === "OK") {
 }
 
 //Example with variables
-const [data, error] = await db.query<any[]>(`SELECT * FROM users WHERE name = $name;`, {name: 'John Doe'});
+type User = {
+  id: string;
+  name: string;
+}
+const [data, error] = await db.query<User[]>(`SELECT * FROM users WHERE name = $name;`, {name: 'John Doe'});
 
 //Handle result the same way as before
 ```
@@ -77,7 +85,7 @@ To authenticate, use the `authenticate` method:
 ```typescript
 db.authenticate({
   method: 'Token',
-  token: 'your-token'
+  token: '<your token>'
 });
 ```
 
