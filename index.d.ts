@@ -89,6 +89,8 @@ export default class SurrealDB {
     private database: string;
 
     constructor(config: SurrealDBConfig);
+    private setRequest(url: string, method: HTTPMethod, body: string | object): any;
+    private processRequest<T = any[]>(config: any): Promise<[RequestResult<T>[], null] | [RequestResult<null>, string]>;
     query<T = any[]>(sql: string, vars?: Record<string, string | number | null>): Promise<QueryResult<T>>;
     authenticate(auth: AuthType): void;
     invalidate(): void;

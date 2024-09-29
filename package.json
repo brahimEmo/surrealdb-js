@@ -1,6 +1,7 @@
 {
   "name": "@brahimemo/surrealdb-js",
   "version": "1.0.0",
+  "type": "module",
   "description": "A lightweight and efficient JavaScript client for interacting with SurrealDB databases. Supports both v1.x and v2.x+",
   "main": "index.js",
   "types": "index.d.ts",
@@ -16,10 +17,13 @@
   ],
   "author": "BrahimEmo",
   "engines": {
-		"node": ">=18.0.0"
-	},
+    "node": ">=18.0.0"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
   }
 }
