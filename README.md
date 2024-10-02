@@ -18,7 +18,7 @@ This package provides a simple interface for querying a SurrealDB database.
 First, initialize the `SurrealDB` class with your database configuration:
 
 ```typescript
-import SurrealDB from 'surrealdb-js';
+import SurrealDB from '@brahimemo/surrealdb-js';
 
 const db = new SurrealDB({
   url: 'http://localhost:8000', // Your SurrealDB URL
